@@ -26,14 +26,11 @@ echo ━━━━━━━━━ஜ۩۞۩ஜ━━━━━━━━
 msg Upload rom..
 echo ━━━━━━━━━ஜ۩۞۩ஜ━━━━━━━━
 cd $WORKDIR/rom/$name_rom
-engzip=$(ls out/target/product/$device/*-eng*.zip | grep -v "retrofit" || true)
-otazip=$(ls out/target/product/$device/*-ota-*.zip | grep -v "hentai" | grep -v "evolution" || true)
-awaken=$(ls out/target/product/$device/Project-Awaken*.zip || true)
-octavi=$(ls out/target/product/$device/OctaviOS-R*.zip || true)
-p404=$(ls out/target/product/$device/?.*zip || true)
-cipher=$(ls out/target/product/$device/CipherOS-*-OTA-*.zip || true)
-rm -rf $engzip $otazip $awaken $octavi $p404 $cipher
 file_name=$(basename out/target/product/$device/*.zip)
+ls
+ls out
+ls out/target/product/$device
+rclone copy out/*.zip gdrive:$name_rom/$device -P
 rclone copy out/target/product/$device/*.zip gdrive:$name_rom/$device -P
 cd $WORKDIR/rom/$name_rom/out/target/product/$device
 echo -e \
