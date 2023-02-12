@@ -9,12 +9,16 @@ git clone --depth=1 ssh://git@github.com/ZenkaBestia/kernel_xiaomi_lmi-a13.git -
 source $CIRRUS_WORKING_DIR/script/config
 timeStart
 
+export KBUILD_BUILD_USER=ZenkaBestia
+export KBUILD_BUILD_HOST=Linux-VM
+export BUILD_USERNAME=ZenkaBestia
+export BUILD_HOSTNAME=Linux-VM
 lunch aospa_lmi-user
 mkfifo reading
 tee "${BUILDLOG}" < reading &
 build_message "Building Started"
 progress &
-./rom-build.sh lmi -t user -s certs -j 6 > reading & sleep 95m
+./rom-build.sh lmi -t user -j 6 > reading & sleep 95m
 
 retVal=$?
 timeEnd
