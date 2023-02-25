@@ -3,7 +3,7 @@ repo init --depth=1 --no-repo-verify -u https://github.com/Evolution-X/manifest.
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16
 git clone --depth=1 ssh://git@github.com/ZenkaBestia/device_xiaomi_lmi-a13.git -b 13-evox device/xiaomi/lmi
 git clone --depth=1 ssh://git@github.com/ZenkaBestia/vendor_xiaomi_lmi-a13.git -b 13-elixir-sun vendor/xiaomi/lmi
-git clone --depth=1 ssh://git@github.com/ZenkaBestia/kernel_xiaomi_lmi-a13.git -b zen_plus-13 kernel/xiaomi/lmi
+git clone --depth=1 ssh://git@github.com/ZenkaBestia/kernel_xiaomi_lmi-a13.git -b NGK-t-caf kernel/xiaomi/lmi
 
 # build rom
 source $CIRRUS_WORKING_DIR/script/config
