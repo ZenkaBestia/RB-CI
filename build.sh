@@ -18,7 +18,7 @@ mkfifo reading
 tee "${BUILDLOG}" < reading &
 build_message "Building Started"
 progress &
-./rom-build.sh lmi -t user -j 6 > reading & sleep 95m
+./rom-build.sh lmi -t user -v beta -j 6 > reading & sleep 95m
 
 retVal=$?
 timeEnd
