@@ -67,13 +67,11 @@ else
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 fi
 rm -rf Sync-rom.log
-cd $WORKDIR/rom/$name_rom/kernel/xiaomi/lmi
-cp arch/arm64/boot/dts/vendor/qcom/kona-v2-gpu-xxxx/kona-v2-gpu-apollo.dtsi arch/arm64/boot/dts/vendor/qcom/kona-v2-gpu.dtsi
-mkdir -p drivers/input/touchscreen/focaltech_3658u/include/firmware
-mkdir -p drivers/input/touchscreen/focaltech_spi/include/firmware
-mkdir -p drivers/input/touchscreen/focaltech_touch/include/firmware
-mkdir -p drivers/input/touchscreen/focaltech_touch/include/pramboot
-cp touch_fw/* drivers/input/touchscreen/focaltech_3658u/include/firmware/
-cp touch_fw/* drivers/input/touchscreen/focaltech_spi/include/firmware/
-cp touch_fw/* drivers/input/touchscreen/focaltech_touch/include/firmware/
-cp touch_fw/* drivers/input/touchscreen/focaltech_touch/include/pramboot/
+cd $WORKDIR/rom/$name_rom/prebuilts/clang/host/linux-x86
+mkdir clang-r487747
+cd clang-r487747
+wget -q https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master/clang-r487747.tgz
+tar -xvf clang-r487747.tgz
+rm -rf clang-r487747.tgz
+ls
+
