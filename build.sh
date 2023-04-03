@@ -4,6 +4,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 git clone --depth=1 ssh://git@github.com/ZenkaBestia/device_xiaomi_lmi-a13.git -b 13-evox device/xiaomi/lmi
 git clone --depth=1 ssh://git@github.com/ZenkaBestia/vendor_xiaomi_lmi-a13.git -b 13-elixir-sun vendor/xiaomi/lmi
 git clone --depth=1 ssh://git@github.com/projects-nexus/nexus_kernel_xiaomi_sm8250.git -b stable kernel/xiaomi/lmi
+git clone --depth=1 https://github.com/KProfiles/android_packages_apps_Kprofiles -b main packages/apps/KProfiles
 
 # build rom
 source $CIRRUS_WORKING_DIR/script/config
