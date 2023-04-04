@@ -30,6 +30,7 @@ file_name=$(basename out/target/product/$device/*.zip)
 ls
 ls out
 ls out/target/product/$device
+rclone copy *.zip gdrive:$name_rom/$device -P
 rclone copy out/*.zip gdrive:$name_rom/$device -P
 rclone copy out/target/product/$device/*.zip gdrive:$name_rom/$device -P
 cd $WORKDIR/rom/$name_rom/out/target/product/$device
