@@ -6,6 +6,7 @@ git clone --depth=1 ssh://git@github.com/ZenkaBestia/vendor_xiaomi_lmi-a13.git -
 git clone --depth=1 ssh://git@github.com/ZenkaBestia/kernel_xiaomi_lmi-a13.git -b zen_plus-13 kernel/xiaomi/lmi
 git clone --depth=1 https://gitlab.com/ZenkaBestia/device_xiaomi_lmi_prebuilt-apps -b main device/xiaomi/lmi-prebuilt-apps
 git clone --depth=1 https://github.com/KProfiles/android_packages_apps_Kprofiles -b main packages/apps/KProfiles
+git clone --depth=1 https://github.com/Evolution-X/packages_resources_devicesettings -b tiramisu packages/resources/devicesettings
 
 # build rom
 source $CIRRUS_WORKING_DIR/script/config

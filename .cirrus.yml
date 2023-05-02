@@ -11,7 +11,7 @@ env:
   CIRRUS_CLONE_DEPTH: "1"
 
 task:
-  name: "Evolution-X Build"
+  name: "Bootleggers Build"
   stateful: true
   timeout_in: 120m
   container:
